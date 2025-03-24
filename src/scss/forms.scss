@@ -1,0 +1,72 @@
+form {
+	display: flex;
+	gap: 0.5rem;
+	flex-direction: column;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+	height: max-content;
+}
+
+button {
+	border: var(--border-width-base) solid transparent;
+	padding: var(--padding-base);
+	font-size: var(--font-size-base);
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #1a1a1a;
+	cursor: pointer;
+	transition: border-color 0.25s;
+}
+
+button,
+input,
+label,
+fieldset {
+	border-radius: var(--border-radius-base);
+}
+
+input {
+	border: var(--border-width-base) solid white;
+	margin: 0 0.75rem;
+	padding: 0.6em 1.2em;
+
+	&:focus {
+		border-color: var(--color-focus);
+		outline: none;
+	}
+
+	&[type='number'] {
+		width: 75px;
+	}
+}
+
+.form-stitch-player {
+	align-items: end;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	margin: 0 0 1rem;
+	justify-content: center;
+}
+
+.form-elem {
+	* {
+		display: block;
+		text-align: left;
+	}
+
+	input {
+		margin: 0;
+	}
+}
+
+button {
+	&.k2tog,
+	&.X {
+		background-color: var(--color-focus);
+		box-shadow: none;
+	}
+}

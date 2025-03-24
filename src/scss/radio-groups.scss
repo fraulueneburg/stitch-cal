@@ -1,0 +1,29 @@
+.radio-group {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	margin-bottom: 0.5rem;
+
+	div {
+		overflow: hidden;
+		position: relative;
+
+		input[type='radio'] {
+			position: absolute;
+			left: -120%;
+		}
+	}
+
+	input[type='radio'] {
+		+ label {
+			border: var(--border-width-base) solid var(--color-focus);
+			display: inline-block;
+			font-weight: bold;
+			padding: var(--padding-base);
+		}
+
+		&:checked + label {
+			background-color: var(--color-focus);
+		}
+	}
+}

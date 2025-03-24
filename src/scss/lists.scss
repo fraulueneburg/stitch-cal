@@ -1,0 +1,54 @@
+ul.unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.horizontal {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+	justify-content: center;
+}
+
+ul button {
+	box-shadow: 0 0 10px var(--color-focus);
+
+	&.k1,
+	&.k2tog {
+		width: 100px;
+	}
+
+	&:hover {
+		border-color: #646cff;
+	}
+
+	&:focus,
+	&:focus-visible {
+		outline: 4px auto -webkit-focus-ring-color;
+	}
+}
+
+ul.mini {
+	button {
+		font-size: 0.8rem;
+		padding: 0.125rem 0.3rem;
+		width: 27px;
+	}
+
+	li {
+		position: relative;
+
+		&:nth-child(10n):after {
+			background-color: white;
+			content: '';
+			display: block;
+			height: 120%;
+			width: 2px;
+			top: 0;
+			right: -3px;
+			position: absolute;
+		}
+	}
+}
