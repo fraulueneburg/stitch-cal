@@ -6,7 +6,7 @@
 
 Just felt like playing around with some knitting calculations using React.
 
-> [!So, this is …]
+> [!NOTE]
 > Used as a playground, possibly for some future tool to calculate even increases/decreases across rows in knitting (my favourite website for this just went offline and is nowhere to be found on archive.org).
 
 This is just a one-evening quick-and-dirty play project, far from finished or perfect, but possibly something to experiment with some more in the future.
