@@ -14,7 +14,6 @@ function StitchPlayer() {
 		const newNumStart = +event.target.value
 
 		if (newNumStart >= numDecSts / 2) {
-			console.log(`newNumStart >= numDecSts / 2`, `${newNumStart}`, numDecSts / 2)
 			setStsLength(newNumStart - numDecSts * 2)
 			setNumStartSts(newNumStart)
 		}
@@ -32,14 +31,15 @@ function StitchPlayer() {
 		const arrSts = new Array(stsLength).fill('k1')
 		const arrDecs = new Array(decLength).fill('k2tog')
 
-		if (stsLength % 2 == 0) {
-			const part1 = arrSts.slice(0, stsLength / 2)
-			const part2 = arrSts.slice(stsLength / 2, stsLength)
+		const part1 = arrSts.slice(0, stsLength / 2)
+		const part2 = arrSts.slice(stsLength / 2, stsLength)
 
-			setResultArr(part1.concat(arrDecs, part2))
-		} else {
-			setResultArr(arrSts.concat(arrDecs))
-		}
+		setResultArr(part1.concat(arrDecs, part2))
+		// if (arrSts % 2 != 0 && arrSts >= 4 && arrDecs % 2 == 0) {
+		// 	const middlePart = arrSts.slice(stsLength / 3, stsLength / 3 + (stsLength % 3))
+		// 	console.log('middlePart', middlePart)
+		// } else {
+		// }
 	}, [stsLength, decLength])
 
 	return (
